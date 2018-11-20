@@ -6,7 +6,6 @@
 #  title      :string           not null
 #  url        :string
 #  content    :text
-#  sub_id     :integer          not null
 #  user_id    :integer          not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -14,12 +13,18 @@
 
 class Post < ApplicationRecord
 
-  validates :title, :sub_id, :user_id, presence: true
+  validates :title, presence: true
   
-  belongs_to :sub
+  has_many :postsubs,
+    foreign_key: :post_id,
+    class_name: :PostSub
+    
+  has_many :subs,
+    through: :postsubs,
+    source: :sub
   
   belongs_to :author,
-  foreign_key: :user_id,
-  class_name: 'User'
+    foreign_key: :user_id,
+    class_name: 'User'
 
 end
