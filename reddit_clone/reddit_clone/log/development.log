@@ -80,3 +80,32 @@ Completed 200 OK in 329ms (Views: 253.7ms | ActiveRecord: 0.0ms)
 
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /usr/local/var/rbenv/versions/2.5.0/bin/annotate:23
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-11-20 11:38:43 -0800
+Processing by Rails::InfoController#routes as HTML
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-11-20 11:38:53 -0800
+  Rendering /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (8.6ms)
+  Rendered /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 69ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (7.7ms)
+  Rendered /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mSub Load (10.7ms)[0m  [1m[34mSELECT "subs".* FROM "subs"[0m
+  [1m[36mSub Load (0.4ms)[0m  [1m[34mSELECT  "subs".* FROM "subs" WHERE "subs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-11-20 12:00:00 -0800
+Processing by Rails::InfoController#routes as HTML
+  Rendering /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [24 times] (7.3ms)
+  Rendered /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /usr/local/var/rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 95ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
