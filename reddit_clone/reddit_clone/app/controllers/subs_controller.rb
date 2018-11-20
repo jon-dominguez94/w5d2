@@ -1,7 +1,12 @@
 class SubsController < ApplicationController
   
   before_action :require_login
-  # before_action :ensure_moderator, only: [:edit, :update]
+  before_action :ensure_moderator, only: [:edit, :update]
+  
+  def ensure_moderator
+    @sub = Sub.find(params[:id])
+    redirect_to sub_url(@sub) unless @sub.user_id == current_user.id    
+  end
   
   def new
     @sub = Sub.new

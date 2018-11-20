@@ -1,2 +1,14 @@
-<h1>Subs#show</h1>
-<p>Find me in app/views/subs/show.html.erb</p>
+<h1>Sub Show Page</h1>
+
+<h2><%= @sub.title %></h2>
+<p><%= @sub.description %></p>
+
+<br>
+
+<a href="<%= new_post_url %>">Create new post</a>
+
+<br>
+<a href="<%= edit_sub_url %>">Edit Sub</a>
+<br>
+<a href="<%= subs_url %>">Back to Index</a>
+

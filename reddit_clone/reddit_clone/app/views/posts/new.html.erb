@@ -1,2 +1,19 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>Create New Post</h1>
+
+<form class="" action="<%= posts_url %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <table>
+    <tr>
+      <td>Title: </td><td><input type="text" name="post[title]" value=""></td>
+    </tr>
+    
+    <tr>
+      <td>URL:</td> <td><input type="text" name="post[url]" value=""></td>
+    </tr>
+    
+    <tr>
+      <td>Content:</td> <td><textarea name="post[content]" rows="8" cols="80"></textarea></td>
+    </tr>
+  </table>
+  <input type="submit" name="" value="Create New Post">
+</form>
