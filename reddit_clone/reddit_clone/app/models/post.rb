@@ -17,14 +17,16 @@ class Post < ApplicationRecord
   
   has_many :postsubs,
     foreign_key: :post_id,
-    class_name: :PostSub
+    class_name: :PostSub,
+    inverse_of: :post
     
-  has_many :subs,
+  has_many :subs, 
     through: :postsubs,
     source: :sub
   
   belongs_to :author,
     foreign_key: :user_id,
     class_name: 'User'
-
+    
+    
 end

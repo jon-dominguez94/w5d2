@@ -20,7 +20,8 @@ class Sub < ApplicationRecord
   
   has_many :postsubs,
     foreign_key: :sub_id,
-    class_name: :PostSub
+    class_name: :PostSub,
+    inverse_of: :sub
     
   has_many :posts,
     through: :postsubs,

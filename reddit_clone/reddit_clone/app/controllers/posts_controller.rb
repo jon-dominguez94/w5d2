@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     # @post.sub_id = params[:sub_id]
     
     if @post.save
-      redirect_to sub_url(xxx)
+      redirect_to subs_url
     else
       flash[:errors] = @post.errors.full_messages
       render :new
@@ -49,7 +49,7 @@ class PostsController < ApplicationController
   
   private
   def post_params
-    params.require(:post).permit(:title, :url, :content)
+    params.require(:post).permit(:title, :url, :content, sub_ids: [])
   end
 end
 

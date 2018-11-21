@@ -15,5 +15,11 @@
       <td>Content:</td> <td><textarea name="post[content]" rows="8" cols="80"></textarea></td>
     </tr>
   </table>
+  
+    <% Sub.all.each do |sub| %>
+    <label>
+      <%= sub.title %><input type="checkbox" name="post[sub_ids][]" value="<%= sub.id %>">
+    </label>
+    <% end %>
   <input type="submit" name="" value="Create New Post">
 </form>
