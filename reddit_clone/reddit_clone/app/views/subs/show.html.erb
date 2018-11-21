@@ -3,6 +3,22 @@
 <h2><%= @sub.title %></h2>
 <p><%= @sub.description %></p>
 
+
+
+<table>
+  <% @sub.posts.each do |post| %>
+  <tr>
+    <td>Title: </td><td> <%=post.title %></td>
+  </tr>
+  <tr>
+    <td>URL: </td><td> <%=post.url %></td>
+  </tr>
+  <tr>
+    <td>Content: </td><td> <%=post.content %></td>
+  </tr>
+  <% end %>
+</table>
+
 <br>
 
 <a href="<%= new_post_url %>">Create new post</a>
